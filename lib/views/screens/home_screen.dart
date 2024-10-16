@@ -80,6 +80,7 @@ $response
           Expanded(
             child: SingleChildScrollView(
               controller: scrollController,
+              reverse: true,
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
@@ -140,9 +141,9 @@ $response
                         : const SizedBox(),
                     if (isDownloading)
                       Container(
-                          margin: EdgeInsets.only(left: 5),
+                          margin: const EdgeInsets.only(left: 5),
                           width: 20,
-                          child: CircleAvatar()),
+                          child: const CircleAvatar()),
                   ],
                 ),
               ),
