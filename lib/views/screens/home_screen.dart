@@ -159,21 +159,23 @@ $response
                 },
                 controller: _queryController,
                 decoration: InputDecoration(
-                  filled: true,
-                  fillColor: Colors.white.withOpacity(0.1),
-                  suffixIcon: IconButton(
-                    onPressed: _sendQuery,
-                    icon: const Icon(Icons.send, color: Colors.white),
-                  ),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
+                    filled: true,
+                    fillColor: Colors.white.withOpacity(0.1),
+                    suffixIcon: IconButton(
+                      onPressed: _sendQuery,
+                      icon: const Icon(Icons.send, color: Colors.white),
+                    ),
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(color: Colors.white)),
+                    errorStyle: const TextStyle(
+                      color: Colors.white,
+                    )),
                 style: const TextStyle(color: Colors.white),
                 onFieldSubmitted: (value) => _sendQuery(),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter a message';
+                    return 'Please enter a message!';
                   }
                   return null;
                 },
